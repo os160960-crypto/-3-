@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Array3숙제.html</title>
+</head>
+<body>
+    <input type="text" id="inputMsg"/>
+    <button onclick="send()">전송</button>
+    <script>
+        var msgs = [];
+        var send = function(){
+            var msg = document.getElementById("inputMsg").value;
+            // 2. 배열에 저장한다.
+            // 3. alert로 '배열에 저장했습니다.'
+            // 4.콘솔창에 msgs 출력
+            // 5. input 에 입력한 내용 삭제
+            msgs.push(msg);
+            alert('배열에 저장했습니다.');
+            console.log(msgs);
+            document.getElementById("inputMsg").value = '';
+            
+        }
+    </script>
+</body>
+</html>

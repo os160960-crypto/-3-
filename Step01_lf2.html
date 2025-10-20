@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_lf2.html</title>
+</head>
+<body>
+    <button onclick="input()">점수 입력</button>
+    <script>
+        var input = function() {
+            var inputNum = prompt("0~100점수입력",0);
+
+            console.log(inputNum);
+
+            var jumsu = parselnt(inputNum);
+
+            if(jumsu >= 90){
+                console.log('A');
+            } else if (jumsu >= 80) {
+                console.log('B');
+            } else if (jumsu >= 70) {
+                console.log('C');
+            } else {
+                console.log('F');
+            }
+    </script>
+</body>
+</html>

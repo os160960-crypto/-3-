@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Switch.html</title>
+</head>
+<body>
+    <script>
+        /*
+            [ switch 문]
+            - 조건문
+            - switch와 case로 구성
+            - switch 의 변수와 case의 상수로 비교하여 일치하면 실행,
+            일치하지 않으면 다음 case문으로 넘어감 
+            -switch() 괄호 안 에는 변수, 상수, 비교 연산자 등
+            데이터가 자유롭게 올 수 있지만 case문 뒤에는 상수 값만 올 수 있다.
+
+            var 변수;
+
+            switch(변수){
+            // 변수 == 상수1 실행문A실행
+            case 상수1:
+                실행문A
+                break;
+
+             // 변수 != 상수1, 변수 == 상수2 실행문B실행
+            case 상수2:
+            실행문B
+            break;
+            
+            // 변수 != 상수1, 변수 != 상수2 실행문C실행
+            default :
+            실행문C
+        }
+        */
+       var a=2;
+       switch(a){
+        case 1 :aconsole.log('a는 1');
+
+        case 2 : 
+        console.log('a는 2');
+        break;
+
+        default :
+        console.log('a는 1도 2도 아니다');
+       }
+    </script>
+</body>
+</html>
