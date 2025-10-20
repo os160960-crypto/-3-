@@ -33,16 +33,83 @@ var pokeName = {
 	name2: document.getElementById("name2"),
 	name3: document.getElementById("name3"),
 };
-
 var pokeLevel = {
 	level1: document.getElementsByClassName("level1"),
 	level2: document.getElementsByClassName("level2"),
 	level3: document.getElementsByClassName("level3"),
 };
-
 var pokeImg = {
 	cha1: document.getElementsByClassName("cha1"),
 	cha2: document.getElementsByClassName("cha2"),
 	cha3: document.getElementsByClassName("cha3"),
 };
 
+if (pokeLevel.level1[0].innerText >= 20) {
+	pokeName.name1.innerText = "이상해꽃";
+	pokeImg.cha1[0].src = "icon01_3.png";
+}
+else if (pokeLevel.level1[0].innerText >= 10) {
+	pokeName.name1.innerText = "이상해풀";
+	pokeImg.cha1[0].src = "icon01_2.png";
+}
+pokeImg.cha1[0].onclick = function() {
+	pokeLevel.level1[0].innerText = parseInt(pokeLevel.level1[0].innerText) + 5;
+	if (pokeLevel.level1[0].innerText >= 20) {
+		pokeName.name1.innerText = "이상해꽃";
+		pokeImg.cha1[0].src = "icon01_3.png";
+	}
+	else if (pokeLevel.level1[0].innerText >= 10) {
+		pokeName.name1.innerText = "이상해풀";
+		pokeImg.cha1[0].src = "icon01_2.png";
+	}
+	checkFinalEvolution();
+}
+if (pokeLevel.level2[0].innerText >= 20) {
+	pokeName.name2.innerText = "리자몽";
+	pokeImg.cha2[0].src = "icon02_3.png";
+}
+else if (pokeLevel.level2[0].innerText >= 10) {
+	pokeName.name2.innerText = "리자드";
+	pokeImg.cha2[0].src = "icon02_2.png";
+}
+pokeImg.cha2[0].onclick = function() {
+	pokeLevel.level2[0].innerText = parseInt(pokeLevel.level2[0].innerText) + 5;
+	if (pokeLevel.level2[0].innerText >= 20) {
+		pokeName.name2.innerText = "리자몽";
+		pokeImg.cha2[0].src = "icon02_3.png";
+	}
+	else if (pokeLevel.level2[0].innerText >= 10) {
+		pokeName.name2.innerText = "리자드";
+		pokeImg.cha2[0].src = "icon02_2.png";
+	}
+	checkFinalEvolution();
+}
+if (pokeLevel.level3[0].innerText >= 20) {
+	pokeName.name3.innerText = "거북왕";
+	pokeImg.cha3[0].src = "icon03_3.png";
+}
+else if (pokeLevel.level3[0].innerText >= 10) {
+	pokeName.name3.innerText = "어니부기";
+	pokeImg.cha3[0].src = "icon03_2.png";
+}
+pokeImg.cha3[0].onclick = function() {
+	pokeLevel.level3[0].innerText = parseInt(pokeLevel.level3[0].innerText) + 5;
+	if (pokeLevel.level3[0].innerText >= 20) {
+		pokeName.name3.innerText = "거북왕";
+		pokeImg.cha3[0].src = "icon03_3.png";
+	}
+	else if (pokeLevel.level3[0].innerText >= 10) {
+		pokeName.name3.innerText = "어니부기";
+		pokeImg.cha3[0].src = "icon03_2.png";
+	}
+	checkFinalEvolution();
+}
+
+// 로고 바뀌는 거 
+function checkFinalEvolution() {
+	if (pokeName.name1.innerText === "이상해꽃" && 
+		pokeName.name2.innerText === "리자몽" &&
+		pokeName.name3.innerText === "거북왕") {
+		document.querySelector(".logo").src = "logo2.png";
+	}
+}
